@@ -4,20 +4,20 @@ import * as React from 'react';
 
 export function Product({value, setValue, name, id}) {
     return (
-        <div className="card">
-            <span className="name">{name}</span>
-            <div className="counter-group">
+        <div className={`products__card ${id}`}>
+            <span className='products__name'>{name}</span>
+            <div className='products__counter'>
                 <button
-                    className="minus"
+                    className='btn btn__minus'
                     onClick={() => {
                         if(value > 0) { setValue(value - 1) };
                     }}
                 >
                     -
                 </button>
-                <span className="number">{value}</span>
+                <span className='products__number'>{value}</span>
                 <button
-                    className="plus"
+                    className='btn btn__plus'
                     onClick={() => {
                         setValue(value + 1);
                     }}
